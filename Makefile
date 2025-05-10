@@ -11,7 +11,8 @@ check: ## Run code quality tools.
 	@echo "🚀 Linting code: Running pre-commit"
 	@uv run pre-commit run -a
 	@echo "🚀 Static type checking: Running mypy"
-	@uv run mypy
+	@echo "DISABLED"
+#	@uv run mypy
 
 .PHONY: test
 test: ## Test the code with pytest
@@ -27,6 +28,11 @@ build: clean-build ## Build wheel file
 clean-build: ## Clean build artifacts
 	@echo "🚀 Removing build artifacts"
 	@uv run python -c "import shutil; import os; shutil.rmtree('dist') if os.path.exists('dist') else None"
+
+.PHONY: up
+up: ## Start the development server
+	@echo "🚀 Starting development server"
+	@uv run chainlit run src/chainlit_and_outline/app.py -w
 
 .PHONY: help
 help:

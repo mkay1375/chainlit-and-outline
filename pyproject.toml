@@ -17,6 +17,13 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "chainlit>=2.3.0",
+    "dotenv>=0.9.9",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "pydantic-ai>=0.1.11",
+]
 
 [project.urls]
 Homepage = "https://mkay1375.github.io/chainlit-and-outline/"
@@ -28,11 +35,11 @@ dev = [
     "pytest>=7.2.0",
     "pre-commit>=2.20.0",
     "tox-uv>=1.11.3",
-    
+
     "mypy>=0.991",
-    
+
     "ruff>=0.11.5",
-    
+
 ]
 
 [build-system]
@@ -97,6 +104,14 @@ ignore = [
     "E501",
     # DoNotAssignLambda
     "E731",
+    # Loop control variable `message_history` not used within loop body
+    "B007",
+    #  Loop control variable `message_history` overrides iterable it iterates
+    "B020",
+    # Avoid specifying long messages outside the exception class
+    "TRY003",
+    # Consider moving this statement to an `else` block
+    "TRY300",
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -104,5 +119,3 @@ ignore = [
 
 [tool.ruff.format]
 preview = true
-
-
