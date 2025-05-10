@@ -25,7 +25,7 @@ jobs:
       - name: Run checks
         run: make check
 
-  tests-and-type-check:
+  tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -45,6 +45,3 @@ jobs:
 
       - name: Run tests
         run: uv run python -m pytest tests
-
-      - name: Check typing
-        run: uv run mypy
