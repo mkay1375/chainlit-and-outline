@@ -1,6 +1,6 @@
 # Chainlit and Outline Integration
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/mkay1375/chainlit-and-outline/main.yml?branch=main)](https://github.com/mkay1375/chainlit-and-outline/actions/workflows/main.yml?query=branch%3Amain)    
+[![Build status](https://img.shields.io/github/actions/workflow/status/mkay1375/chainlit-and-outline/main.yml?branch=main)](https://github.com/mkay1375/chainlit-and-outline/actions/workflows/main.yml?query=branch%3Amain)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/mkay1375/chainlit-and-outline)](https://img.shields.io/github/commit-activity/m/mkay1375/chainlit-and-outline)
 [![License](https://img.shields.io/github/license/mkay1375/chainlit-and-outline)](https://img.shields.io/github/license/mkay1375/chainlit-and-outline)
 
