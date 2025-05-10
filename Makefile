@@ -32,7 +32,7 @@ clean-build: ## Clean build artifacts
 .PHONY: up
 up: ## Start the development server
 	@echo "🚀 Starting development server"
-	@uv run chainlit run src/chainlit_and_outline/app.py -w
+	@uv run chainlit run src/chainlit_and_outline/app.py -w -h
 
 .PHONY: help
 help:
