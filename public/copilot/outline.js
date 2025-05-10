@@ -35,11 +35,11 @@ chainlitCopilot = {
           #chainlit-copilot-button {
               bottom: 4rem;
           }
-          
+
           #cl-shadow-root div[role=dialog] {
               max-height: calc(100vh - 212px);
           }
-          
+
           div[data-radix-popper-content-wrapper] {
               z-index: 9999 !important;
           }
