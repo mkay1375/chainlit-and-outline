@@ -32,13 +32,13 @@ class OutlineAgent:
         self.agent = Agent(
             model="gpt-4.1",
             name="Outline Agent",
-            result_type=Response,
+            output_type=Response,
             tools=[
                 Tool(get_doc_by_url, takes_ctx=False),
                 Tool(search_docs, takes_ctx=False),
                 Tool(get_current_page_url, takes_ctx=False),
             ],
-            retries=3,
+            output_retries=3,
             system_prompt=SYSTEM_PROMPT,
         )
 
