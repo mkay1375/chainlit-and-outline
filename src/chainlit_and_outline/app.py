@@ -9,8 +9,11 @@ async def on_message(message: cl.Message):
     agent = OutlineAgent()
     message_history = cl.user_session.get("message_history")
 
-    async for response, message_history in agent.run_stream(message=message.content, message_history=message_history):
-        await cl_response_message.stream_token(response.to_markdown(), is_sequence=True)
+    with cl.Step(name="Outline Agent", type="run"):
+        async for response, message_history in agent.run_stream(
+            message=message.content, message_history=message_history
+        ):
+            await cl_response_message.stream_token(response.to_markdown(), is_sequence=True)
 
     await cl_response_message.update()
 
