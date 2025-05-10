@@ -1,68 +1,63 @@
-# chainlit-and-outline
+# Chainlit and Outline Integration
 
-[![Release](https://img.shields.io/github/v/release/mkay1375/chainlit-and-outline)](https://img.shields.io/github/v/release/mkay1375/chainlit-and-outline)
-[![Build status](https://img.shields.io/github/actions/workflow/status/mkay1375/chainlit-and-outline/main.yml?branch=main)](https://github.com/mkay1375/chainlit-and-outline/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/mkay1375/chainlit-and-outline/branch/main/graph/badge.svg)](https://codecov.io/gh/mkay1375/chainlit-and-outline)
+[![Build status](https://img.shields.io/github/actions/workflow/status/mkay1375/chainlit-and-outline/main.yml?branch=main)](https://github.com/mkay1375/chainlit-and-outline/actions/workflows/main.yml?query=branch%3Amain)    
 [![Commit activity](https://img.shields.io/github/commit-activity/m/mkay1375/chainlit-and-outline)](https://img.shields.io/github/commit-activity/m/mkay1375/chainlit-and-outline)
 [![License](https://img.shields.io/github/license/mkay1375/chainlit-and-outline)](https://img.shields.io/github/license/mkay1375/chainlit-and-outline)
 
-This is a template repository for Python projects that use uv for their dependency management.
+A Python demo project that combines [Chainlit](https://chainlit.io)'s chat interface with [Outline](https://www.getoutline.com).
 
-- **Github repository**: <https://github.com/mkay1375/chainlit-and-outline/>
-- **Documentation** <https://mkay1375.github.io/chainlit-and-outline/>
+Using this project you can ask about your documents in Outline like "What do you know about topic X?",
+or "Can you summarize this doc? (Link of the doc)".
 
-## Getting started with your project
+## Prerequisites
 
-### 1. Create a New Repository
+- Python 3.9 or higher
+- uv package manager
+- Git
+- Make
 
-First, create a repository on GitHub with the same name as this project, and then run the following commands:
+## Quick Start
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mkay1375/chainlit-and-outline.git
+   cd chainlit-and-outline
+   ```
+
+2. Install dependencies using uv:
+   ```bash
+   make install
+   ```
+
+3. Create a `.env` file in the project root with your configuration:
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Update the `.env` file with your settings:
+   ```env
+   OUTLINE_API_KEY=your_outline_api_key
+   OUTLINE_API_URL=your_outline_api_url
+   OPENAI_API_KEY=your_open_ai_api_key
+   ```
+
+5. Start the development server:
+   ```bash
+   make up
+   ```
+
+The application will be available at `http://localhost:8000`
+
+## Development
+
+To ensure code quality, the project uses pre-commit hooks. Run them manually with:
 ```bash
-git init -b main
-git add .
-git commit -m "init commit"
-git remote add origin git@github.com:mkay1375/chainlit-and-outline.git
-git push -u origin main
+make check
 ```
 
-### 2. Set Up Your Development Environment
+## License
 
-Then, install the environment and the pre-commit hooks with
-
-```bash
-make install
-```
-
-This will also generate your `uv.lock` file
-
-### 3. Run the pre-commit hooks
-
-Initially, the CI/CD pipeline might be failing due to formatting issues. To resolve those run:
-
-```bash
-uv run pre-commit run -a
-```
-
-### 4. Commit the changes
-
-Lastly, commit the changes made by the two steps above to your repository.
-
-```bash
-git add .
-git commit -m 'Fix formatting issues'
-git push origin main
-```
-
-You are now ready to start development on your project!
-The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
-
-To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
-For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
-
-## Releasing a new version
-
-
+This project is licensed under the terms of the license included in the repository.
 
 ---
 

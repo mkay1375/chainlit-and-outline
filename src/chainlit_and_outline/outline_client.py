@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 class OutlineClient:
     def __init__(self, base_url: Optional[str] = None, api_key: Optional[str] = None):
         self.base_url = base_url or os.environ.get("OUTLINE_BASE_URL")
-        self.api_token = api_key or os.environ.get("OUTLINE_API_TOKEN")
+        self.api_token = api_key or os.environ.get("OUTLINE_API_KEY")
 
         if not self.base_url:
             raise ValueError(
@@ -18,7 +18,7 @@ class OutlineClient:
             )
         if not self.api_token:
             raise ValueError(
-                "Outline API token is required. Set OUTLINE_API_TOKEN environment variable or pass it directly."
+                "Outline API token is required. Set OUTLINE_API_KEY environment variable or pass it directly."
             )
 
         self.base_url = self.base_url.rstrip("/")
