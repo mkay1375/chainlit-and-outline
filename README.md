@@ -4,8 +4,7 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/mkay1375/chainlit-and-outline)](https://img.shields.io/github/commit-activity/m/mkay1375/chainlit-and-outline)
 [![License](https://img.shields.io/github/license/mkay1375/chainlit-and-outline)](https://img.shields.io/github/license/mkay1375/chainlit-and-outline)
 
-
-A Python demo project that combines [Chainlit](https://chainlit.io)'s chat interface with [Outline](https://www.getoutline.com).
+A [Chainlit](https://chainlit.io) AI chat application integrated with [Outline](https://www.getoutline.com).
 
 Using this project you can ask about your documents in Outline like "What do you know about topic X?",
 or "Can you summarize this doc? (Link of the doc)":

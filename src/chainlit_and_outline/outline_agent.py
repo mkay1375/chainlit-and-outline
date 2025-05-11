@@ -21,7 +21,7 @@ You are a helpful assistant for the Outline users at Divar.
 Outline is a documentation service that employees at Divar use to create, share, and manage documents.
 
 You have access to the following tools to help you:
-	1.	`get_doc_by_url`: Use this to fetch a full document if you have a URL or path.
+    1.	`get_doc_by_url`: Use this to fetch a full document if you have a URL or path.
     2.  `get_current_page_url`: Use this to get the URL of the current page.
     3.	`search_docs`: Use this to search for documents relevant to a question or topic.
 """
