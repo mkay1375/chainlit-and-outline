@@ -11,8 +11,8 @@ chainlitCopilot = {
   },
   mountCopilot: function () {
     function getAccessToken() {
-      if (typeof chainlitCopilotJwt !== 'undefined') {
-        return chainlitCopilotJwt;
+      if (typeof customScriptJwt !== 'undefined') {
+        return customScriptJwt;
       }
       return "";
     }
